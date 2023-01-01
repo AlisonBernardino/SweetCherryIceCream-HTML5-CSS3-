@@ -1,11 +1,246 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
+:root {
+  --coalBlack: rgb(18, 18, 18);
+  --transparentCoalBlack: rgba(8, 8, 8, 0.107);
+  --neutralWhite: rgb(255, 255, 255);
+  --goldenYellow: rgb(255, 234, 0);
+  --transparentGoldenYellow: rgba(255, 234, 0, 0.55);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 14px 55px;
+  text-transform: uppercase;
+  background: var(--coalBlack);
+  color: var(--goldenYellow);
+}
+
+.button:hover {
+  background: var(--transparentGoldenYellow);
+  color: var(--coalBlack);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.headline {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.1rem;
+  letter-spacing: 1.5px;
+  padding-bottom: 45px;
+}
+
+#navbarItem {
+  width: 100%;
+  color: var(--coalBlack);
+  background: var(--transparentGoldenYellow);
+}
+
+#navbarContainer {
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbarItems {
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+}
+
+#navbarItems li {
+  padding: 12px;
+}
+
+/* "Showcase" section */
+#showcaseItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  color: var(--neutralWhite);
+  background: url('/assets/images/showcaseImage.jpg') no-repeat center
+    center/cover;
+}
+
+#showcaseContainer {
+  text-align: center;
+}
+
+#showcaseContainer h3 {
+  background: var(--transparentGoldenYellow);
+  color: var(--coalBlack);
+  font-size: 1.8rem;
+}
+
+#showcaseContainer p {
+  background: var(--goldenYellow);
+  color: var(--coalBlack);
+  font-size: 1.1rem;
+  padding-bottom: 9px 0;
+}
+
+/* "Our clients" section */
+#clientsArea {
+  width: 95%;
+  background: var(--neutralWhite);
+  padding: 45px;
+  color: var(--coalBlack);
+}
+
+#clientsContainer {
+  justify-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 14px;
+  display: grid;
+}
+
+.client {
+  width: 75%;
+  display: inline-block;
+}
+
+/* "Our benefits" section */
+#featuresArea {
+  padding: 45px;
+  width: 100%;
+  color: var(--coalBlack);
+  background: var(--transparentGoldenYellow);
+}
+
+.feature {
+  padding: 18px;
+  border-radius: 4px;
+  background: var(--transparentCoalBlack);
+  flex-direction: column;
+  display: flex;
+  font-weight: bold;
+}
+
+.featureTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#featuresContainer {
+  width: 97%;
+  padding: 14px;
+  text-align: center;
+  justify-items: center;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 45px;
+}
+
+/* "Feedbacks" section */
+#feedbacksArea {
+  padding: 47px;
+  width: 100%;
+}
+
+#productA {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#feedbacksContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+#clientsFeedbacks {
+  width: 350px;
+}
+
+#clientsFeedbacks .feedback {
+  text-align: left;
+  font-size: 0.9rem;
+  padding: 9px;
+  margin: 8px 0;
+}
+
+/* "Featured places" section */
+.newRestaurant {
+  border-radius: 4px;
+  align-items: center;
+  margin: 14px 0;
+  padding: 14px;
+  display: flex;
+  font-size: 1.1rem;
+  background: var(--transparentCoalBlack);
+  display: flex;
+}
+
+.newRestaurantImage {
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 45px;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 10%;
+  margin-right: 25px;
+  margin-left: 25px;
+  box-shadow: 8px 12px 24px var(--coalBlack);
+}
+
+#newRestaurantsArea {
+  width: 100%;
+}
+
+#newRestaurantsContainer {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+/* "Gallery" section */
+#galleryArea {
+  width: 95%;
+  padding: 46px;
+  margin: auto;
+}
+
+#galleryContainer {
+  justify-items: center;
+  grid-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+.galleryImage {
+  border-radius: 10px;
+  height: 250px;
+  width: 350px;
+  display: inline-block;
+  box-shadow: 8px 12px 24px var(--coalBlack);
+}
+
+/* "Footer" section */
+#footer {
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+  color: var(--neutralWhite);
+  background: var(--coalBlack);
 }
